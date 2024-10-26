@@ -1,0 +1,88 @@
+<DashboardScreen>:
+    name: "screen_dashboard"
+
+    MDFloatLayout:
+        md_bg_color: [0,0,0,1]
+
+        MDTopAppBar:
+            type: "small"
+            size_hint_x: 1
+            size_hint_y: .1
+            pos_hint: {"center_x": .5, "center_y": .95}
+
+            MDTopAppBarLeadingButtonContainer:
+
+                MDActionTopAppBarButton:
+                    icon: "arrow-left"
+                    on_release: root.back_to_main()
+            MDTopAppBarTitle:
+                text: "Dashboard"
+                pos_hint: {"center_x": .5}
+
+            MDTopAppBarTrailingButtonContainer:
+
+                MDActionTopAppBarButton:
+                    icon: "account"
+                    
+                MDActionTopAppBarButton:
+                    icon: "calendar"
+                    
+                MDActionTopAppBarButton:
+                    icon: "dots-vertical"
+
+        MDFloatLayout:
+            size_hint_x: 1
+            size_hint_y: .33
+            pos_hint: {"center_x": .5, "center_y": .75}
+
+            canvas:
+                Color:
+                    rgba: [1, 1, 1, 1]
+            
+                Rectangle:
+                    size: self.size[0], self.size[1]
+                    pos: self.pos
+                    source: "landscape2.png"
+        MDFloatLayout:
+            size_hint_x: .28
+            size_hint_y: .28
+            pos_hint: {"center_x": .5, "center_y": .6}
+            
+            canvas:
+                Color:
+                    rgba: [1, 1, 1, 1]
+            
+                Ellipse:
+                    size: self.size[0], self.size[1]
+                    pos: self.pos
+                
+
+        MDFloatLayout:
+            size_hint_x: .265
+            size_hint_y: .265
+            pos_hint: {"center_x": .5, "center_y": .6}
+            
+            canvas:
+                Color:
+                    rgba: [1, 1, 1, 1]
+            
+                Ellipse:
+                    size: self.size[0], self.size[1]
+                    pos: self.pos
+                    source: "Profile_pic.png"
+        MDFloatLayout:
+            MDLabel:
+                text: "CODY BLACKMON"
+                halign: 'center'
+                size_hint_y: None
+                height: self.texture_size[1]
+                pos_hint: {"center_x": .5, "center_y": .4}
+                font_style: "Display"
+                role: "small"
+            
+            
+                
+
+                
+                    
+        

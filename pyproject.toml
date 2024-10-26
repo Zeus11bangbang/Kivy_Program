@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "company-kivy"
+version = "0.1.0"
+description = "This is an app for a company to make appointments, see forecast, manage clients, etc"
+authors = ["Raymond Poythress"]
+license = "N/a"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.9"
+kivy = "^2.3.0"
+kivymd = "^1.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

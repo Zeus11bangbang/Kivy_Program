@@ -1,0 +1,139 @@
+ScreenManager:
+    LoginScreen:
+    MainScreen:
+    DashboardScreen:
+    
+<LoginScreen>:
+    name: "screen_login"
+    email: email_input
+    password: password_input
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint: .8, .3
+        pos_hint: {"center_x": .5, "center_y": .825}
+        spacing: 20
+        padding: 10
+
+        FloatLayout:
+                
+            Label:
+                text: 'Pressure'
+                size_hint: (None, None)
+                size: 200, 40  # Fixed size for the label
+                font_size: 70
+                font_name: '/home/raymond/Documents/Kivy_Program/KivyMD/kivymd/fonts/Roboto-BoldItalic.ttf'
+                pos_hint: {"center_x": .5, "center_y": .6}  # Center label
+
+            Label:
+                text: 'Kleen'
+                size_hint: (None, None)
+                size: 200, 40  # Fixed size for the label
+                font_size: 70
+                font_name: '/home/raymond/Documents/Kivy_Program/KivyMD/kivymd/fonts/Roboto-LightItalic.ttf'
+                pos_hint: {"center_x": .5, "center_y": .2}  # Adjusted for overlap
+
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 20
+        padding: 10
+        pos_hint: {"center_x": .5, "center_y": .51}
+        size_hint: .8, .3
+
+        MDTextField:
+            mode: "filled"
+
+            id: email_input
+            normal_color: [0, 0, 0, 0.2]
+            active_color: [0, 0, 0, 0.2]
+            icon_type: "left"
+            size_hint: .5, None
+            pos_hint: {"center_x": .5}
+            hint_text: "Email"
+
+            MDTextFieldLeadingIcon:
+                icon: "account"
+            MDTextFieldHintText:
+                text: "Username"
+
+            MDTextFieldTrailingIcon:
+                icon: "information"
+
+        MDTextField:
+            mode: "filled"
+
+            id: password_input
+            password: True
+            normal_color: [0, 0, 0, 0.2]
+            active_color: [0, 0, 0, 0.2]
+            icon_type: "left"
+            icon_left: "lock"
+            size_hint: .5, None
+            pos_hint: {"center_x": .5}
+            hint_text: "Password"
+
+            MDTextFieldLeadingIcon:
+                icon: "account"
+            MDTextFieldHintText:
+                text: "Password"
+
+            MDTextFieldTrailingIcon:
+                icon: "information"
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint: .4, .1
+        pos_hint: {"center_x": .58, "center_y": .3}
+        spacing: 10
+        padding: 20
+
+        MDButton:
+            style: "tonal"
+            height: "56dp"
+            width: 10
+            height: 30
+            on_release: root.clear_button()
+
+            MDButtonText:
+                text: "Clear"
+                pos_hint: {"center_x": .5, "center_y":.5}
+
+        MDButton:
+            style: "tonal"
+            height: "56dp"
+            width: 10
+            height: 30
+            on_release: root.loggin_user()
+
+            MDButtonText:
+                text: "Login"
+                pos_hint: {"center_x": .5, "center_y":.5}
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint: .4, .1
+        pos_hint: {"center_x": .5, "center_y": .18}
+        spacing: 0
+        
+        FloatLayout:
+            Label:
+                text: 'New User?'
+                size_hint: (None, None)
+                size: 200, 40  # Fixed size for the label
+                pos_hint: {"center_x": .35, "center_y": .6}
+
+            Button:
+                text: 'Create an Account'
+                background_color: (0, 0, 0, 0)  # Make the button background transparent
+                color: [1, 1, 0, 1]  # Set the text color
+                size_hint: (None, None)
+                size: 200, 40  # Fixed size for the label
+                pos_hint: {"center_x": .675, "center_y": .6}  # Center label
+
+            Button:
+                text: 'Forgot Password?'
+                background_color: (0, 0, 0, 0)  # Make the button background transparent
+                color: [1, 1, 0, 1]  # Set the text color
+                size_hint: (None, None)
+                size: 200, 40  # Fixed size for the label
+                pos_hint: {"center_x": .5, "center_y": .2}  # Adjusted for overlap
